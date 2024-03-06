@@ -7,6 +7,7 @@ let xValue = 0,
 window.addEventListener("mousemove", (e) => {
 if(timeline.isActive()) return;
 
+
   xValue = e.clientX - window.innerWidth / 2;
   yValue = e.clientY - window.innerHeight / 2;
 
@@ -29,13 +30,6 @@ if(window.innerWidth>=725){
   main.style.maxHeight=`${window.innerWidth*1.6}px`
 }
 
-// const distance =420
-// const bgDistance =530
-// if(window.innerHeight>=1400){
-//   distance=400,
-//   bgDistance=580
-// }
-
 
 // GSAP
 
@@ -43,7 +37,7 @@ const timeline = gsap.timeline();
 
 timeline.to(".bottomcloud",
 {
-  top: `${document.querySelector(".bottomcloud").offsetHeight / 2 -420}px`,
+  top: `${document.querySelector(".bottomcloud").offsetHeight / 2 -300}px`,
   duration: 2,
   ease:"power3.out"
 },
@@ -52,7 +46,7 @@ timeline.to(".bottomcloud",
 
 timeline.to(".topcloud",
 {
-  top: `${document.querySelector(".topcloud").offsetHeight / 2 -420}px`,
+  top: `${document.querySelector(".topcloud").offsetHeight / 2 -350}px`,
   duration: 2,
   ease:"power3.out"
 },
@@ -61,16 +55,25 @@ timeline.to(".topcloud",
 
 timeline.to(".bg-img",
 {
-  top: `${document.querySelector(".bg-img").offsetHeight / 2 +530}px`,
+  top: `${document.querySelector(".bg-img").offsetHeight / 2 +350}px`,
   duration: 1.5,
   ease:"power3.out"
 },
 "2"
 )
 
-timeline.from(".hide",
-{
-  opacity:0,
-  duration:1.5,
-},"2")
+
+//Scroll
+
+// let bottomcloud = document.getElementsByClassName("bottomcloud")[0]
+
+
+// window.addEventListener("scroll",function(){
+//   var value= window.scrollY;
+
+//   bottomcloud.style.top=-value*0.15 +"px";
+
+
+
+// })
 
