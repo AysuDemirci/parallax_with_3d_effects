@@ -14,6 +14,7 @@ html{
 body{
     font-family: "Poppins",sans-serif;
     background-color:  #0072B8;
+    overflow-x: hidden;
 }
 
 ::selection{
@@ -55,7 +56,7 @@ header ul a{
     font-size: 1.1rem;
    
 } */
-section{
+.section{
     position: relative;
     width: 100%;
    
@@ -63,7 +64,7 @@ overflow-x: hidden;
 background-color:  #0072B8;
 }
 
-section::before{
+.section::before{
     content: "";
     position: absolute;
     bottom: 0;
@@ -72,7 +73,7 @@ section::before{
     background: linear-gradient(to top, #0072B8 ,transparent);
     z-index: 10000;
 }
-section::after{
+.section::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -199,6 +200,7 @@ z-index: 3;
     padding: 1rem;
     width: 90%;
     margin: auto;
+    
    
 }
 .text-about{
@@ -265,3 +267,129 @@ z-index: 3;
     margin-top: -15px;
 }
 
+.contactMe{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100px;
+    padding: 100px 20vw;
+}
+.orange{
+    background-color: #0072B8;
+}
+.blue{
+    background-color: #f7984a;
+}
+
+
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .wave svg {
+    position: relative;
+    display: block;
+    width: 130%;
+    height: 262px;
+  }
+
+  .wave .shape-fill {
+    fill:#0072B8;
+  }
+ 
+
+  .contact{
+  
+    border-radius: 5px;
+    padding:2rem;
+   margin: auto;
+  }
+.all{
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+
+    width: 70%;
+    margin:auto  ;
+    grid-template-columns: 50% 50%;
+    display: grid;
+    box-shadow: 0 0 55px #CD2D68;
+}
+.inputs{
+    display: flex;
+    gap: 50px;
+    margin-top: 1.5rem;
+}
+
+::placeholder{
+    color: #f7c195;
+    font-size: 15px;
+}
+
+input,textarea{
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    height: 45px;
+    width: 200px;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+  .contact-header{
+   text-align: center;
+    color: #f7c195;
+    font-family: "Lobster", sans-serif;
+    letter-spacing: 3px;
+    font-size: x-large;
+    text-shadow: 0 0 20px #CD2D68;
+  }
+
+  .spacer{
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+  }
+
+  .layer1{
+    background-image: url("/images/layered-waves-haikei\ \(1\).svg");
+    
+  }
+
+  .email{
+    width: 450px;
+  }
+  .mesaj{
+    height: 170px;
+    width: 450px;
+    padding: 10px 20px 5px 20px;
+resize: none;
+  }
+  .button{
+    width: 150px;
+    height: 40px;
+    background-color: #CD2D68;
+    border: none;
+    border-radius: 20px;
+    color: #f7c195;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+  margin-left: 30%;
+  }
+
+  
