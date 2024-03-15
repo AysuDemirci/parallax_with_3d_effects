@@ -63,17 +63,20 @@ timeline.to(".bg-img",
 )
 
 
-//Scroll
+//form
 
-// let bottomcloud = document.getElementsByClassName("bottomcloud")[0]
+const inputs = document.querySelectorAll(".contact-input")
 
-
-// window.addEventListener("scroll",function(){
-//   var value= window.scrollY;
-
-//   bottomcloud.style.top=-value*0.15 +"px";
-
-
-
-// })
+inputs.forEach(ipt=>{
+  ipt.addEventListener("focus",()=>{
+    ipt.parentNode.classList.add("focus");
+    ipt.parentNode.classList.add("not-empty");
+  })
+  ipt.addEventListener("blur",()=>{
+    if(ipt.value==""){
+      ipt.parentNode.classList.remove("not-empty");
+    }
+    ipt.parentNode.classList.remove("focus");
+  })
+})
 

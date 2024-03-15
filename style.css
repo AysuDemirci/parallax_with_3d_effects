@@ -340,10 +340,10 @@ input,textarea{
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.1);
-    height: 45px;
-    width: 200px;
-    border-radius: 5px;
-    padding-left: 20px;
+    /* height: 45px;
+    width: 200px; */
+    border-radius: 20px;
+    /* padding-left: 20px; */
     font-family: "Poppins", sans-serif;
 }
 
@@ -379,7 +379,7 @@ input,textarea{
     padding: 10px 20px 5px 20px;
 resize: none;
   }
-  .button{
+  /* .button{
     width: 150px;
     height: 40px;
     background-color: #CD2D68;
@@ -390,6 +390,114 @@ resize: none;
     font-weight: 600;
     letter-spacing: 2px;
   margin-left: 30%;
+  } */
+
+  .contact-form{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top:2.55rem ;
+    column-gap: 2rem;
+    row-gap:1rem ;
   }
 
-  
+  .input-wrap{
+    position: relative;
+  }
+
+  .input-wrap.w-100{
+    grid-column: span 2;
+  }
+  .contact-input{
+    width: 100%;
+    outline: none;
+    padding:1.5rem 1.35rem calc(0.75rem - 2px) 1.35em ;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    /* border: 2px solid transparent;
+    box-shadow: 0 0 0 0px lightgray; */
+  }
+
+  .input-wrap label{
+    position: absolute;
+    top:50%;
+    left: calc(1.35rem + 2px);
+    transform: translateY(-50%);
+    color: #f7c195;
+    pointer-events: none;
+    transition: .25s;
+
+  }
+
+  .input-wrap .icon{
+   position: absolute;
+   right:calc(1.35rem + 2px);
+   top:50%;
+   transform: translateY(-50%);
+   pointer-events: none;
+   color: #f7c195;
+   font-size: 1.25rem;
+   transition: .3s;
+
+  }
+
+  textarea.contact-input{
+    resize:none ;
+    width: 100%;
+    min-height:150px ;
+  }
+
+  textarea.contact-input ~ label{
+    top:1.2rem;
+    transform: none;
+  }
+
+  textarea.contact-input ~ .icon{
+    top:1.3rem;
+    transform:none;
+  }
+
+  .input-wrap.focus .contact-input{
+    border: 1px solid white;
+   
+  }
+
+  .input-wrap.focus  label{
+    color: white;
+  }
+
+
+  .input-wrap.focus  .icon{
+    color: white;
+  }
+
+  .input-wrap.not-empty label{
+    font-size: .66rem;
+    top:0.75rem;
+    transform: translateY(0);
+  }
+
+  .contact-buttons{
+    display: flex;
+   margin-left: 70%;
+
+  }
+
+  .btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    color: #f7c195;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #CD2D68;
+
+  }
+
+  .btn:hover{
+   
+    color: white;
+    transition: 0.3s;
+    box-shadow: 0 0 20px #f7984a;
+  }

@@ -10,8 +10,9 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed&family=Ubuntu:wght@300&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Madimi+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Madimi+One&display=swap" rel="stylesheet">  <script src="https://kit.fontawesome.com/724def9fd4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
+
   <title>Aysu Demirci</title>
 </head>
 
@@ -144,7 +145,36 @@
         <div class="contact-header">
           <h1>İletişime Geçelim!</h1>
         </div>
-        <div class="inputs">
+        <form action="index.html" method="post" class="contact-form">
+          <div class="input-wrap"> 
+          <input class="contact-input" autocomplete="off" name="İsim"  type="text" required>
+          <label>İsim</label>
+          <i class="icon fas fa-id-card"></i>
+          </div>
+
+          <div class="input-wrap"> 
+            <input class="contact-input" autocomplete="off" name="Soyisim"  type="text" required>
+            <label>Soyisim</label>
+            <i class="icon fas fa-id-card"></i>
+            </div>
+
+            <div class="input-wrap w-100"> 
+              <input class="contact-input" autocomplete="off" name="Email"  type="email" required>
+              <label>E-mail</label>
+              <i class="icon fas fa-envelope"></i>
+              </div>
+          
+              <div class="input-wrap textarea w-100"> 
+                <textarea class="contact-input" autocomplete="off" name="mesaj"  type="email" required></textarea>
+                <label>Mesaj</label>
+                <i class="icon fas fa-inbox"></i>
+                </div>
+
+                <div class="contact-buttons w-100">
+                 <input type="submit" value="gönder" class="btn"> 
+                </div>
+        </form>
+        <!-- <div class="inputs">
           <input placeholder="Adınız" />
           <input placeholder="Soyadınız" />
         </div>
@@ -160,7 +190,7 @@
         <div>
           <button class="button">Gönder!</button>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>
